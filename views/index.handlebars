@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+
+        <h2>Chicago's Best Burgers Checklist</h2>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-4 text-center">
+
+            <h3>"To Eat" List</h3>
+
+            {{#each burgers}} 
+                {{#unless devoured}}
+                    <div class="well">
+                        {{this.burger_name}}
+                        <button class="btn btn-sm btn-danger devourIt liked" type="submit" id="{{this.id}}">
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                {{/unless}} 
+            {{/each}}
+
+        </div>
+
+        <div class="col-lg-4 col-md-4 text-center">
+            <img src="/assets/img/burger.png">
+        </div>
+
+        <div class="col-lg-4 col-md-4 text-center">
+
+            <h3>Tried 'Em!</h3>
+
+            {{#each burgers}} 
+                {{#if devoured}}
+                    <div class="well">
+                        {{burger_name}}
+                    </div>
+                {{/if}} 
+            {{/each}}
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-12 text-center">
+        
+        <h3>Add a Burger</h3>
+
+        <form class="create-form">
+            <div class="form-group">
+                <label for="ca"><h4>Burger Name:</h4></label>
+                <input type="text" id="newBurgerForm" name="name">
+                <button class="btn btn-danger btn-sm" type="submit">
+                    <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
