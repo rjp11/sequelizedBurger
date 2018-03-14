@@ -1,26 +1,21 @@
 {
-  "name": "burger",
+  "name": "node_what_todo",
   "version": "1.0.0",
-  "description": "NU CBC Homework #12 - Week #14 - Full Stack App (MySQL, Node, Express, Handlebars &amp; ORM)",
-  "main": "index.js",
+  "description": "-Node \r -Express \r -MySQL \r -Handlebars \r -Jquery",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rjp11/burger.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rjp11/burger/issues"
-  },
-  "homepage": "https://github.com/rjp11/burger#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.15.0"
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "method-override": "^2.3.5",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
   }
 }
