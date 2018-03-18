@@ -16,7 +16,7 @@
 				<div class="col-xs-3 text-center">
 					<form class="devour-form" class="button-size">
 						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-						<button type="submit" class="btn btn-default" id="devourIt">Devour it!</button>
+						<button type="submit" id = "{{this.id}}" class="btn btn-default devourIt">Devour it!</button>
 					</form>
 				</div>
 				{{/unless}}
@@ -47,7 +47,7 @@
 
 
 <script>
-	$("#devourIt").on("click", function(event) {
+	$(".devourIt").on("click", function(event) {
       var id = $(this).attr("id");
       
       var devouredStatus = {
