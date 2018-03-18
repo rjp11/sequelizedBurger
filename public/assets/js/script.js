@@ -1,46 +1,46 @@
-$(function() {
-    $(".devourIt").on("click", function(event) {
-      var id = $(this).attr("id");
+// $(function() {
+//     $(".devourIt").on("click", function(event) {
+//       var id = $(this).attr("id");
       
-      var devouredStatus = {
-          devoured: true,
-      } 
+//       var devouredStatus = {
+//           devoured: true,
+//       } 
 
-      console.log(devouredStatus);
+//       console.log(devouredStatus);
   
-      // Send the PUT request.
-      $.ajax("/burgers/update/" + id, {
-        type: "PUT",
-        data: devouredStatus
-      }).then(
-        function() {
-          console.log("changed devoured to true");
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
-    });
+//       // Send the PUT request.
+//       $.ajax("/burgers/update/" + id, {
+//         type: "PUT",
+//         data: devouredStatus
+//       }).then(
+//         function() {
+//           console.log("changed devoured to true");
+//           // Reload the page to get the updated list
+//           location.reload();
+//         }
+//       );
+//     });
   
-    $(".create-form").on("submit", function(event) {
+//     $(".create-form").on("submit", function(event) {
       
-      event.preventDefault();
+//       event.preventDefault();
   
-      var newBurger = {
-        burger_name: $("#newBurgerForm").val().trim(),
-      };
+//       var newBurger = {
+//         burger_name: $("#newBurgerForm").val().trim(),
+//       };
   
-      // Send the POST request.
-      $.ajax("/api/burgers", {
-        type: "POST",
-        data: newBurger
-      }).then(
-        function() {
-          console.log("created new burger");
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
-    });
+//       // Send the POST request.
+//       $.ajax("/api/burgers", {
+//         type: "POST",
+//         data: newBurger
+//       }).then(
+//         function() {
+//           console.log("created new burger");
+//           // Reload the page to get the updated list
+//           location.reload();
+//         }
+//       );
+//     });
   
-  });
+//   });
   
