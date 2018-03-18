@@ -19,7 +19,6 @@ db.sequelize.sync().then(function(){
   });
 });
 
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
   extended: false
