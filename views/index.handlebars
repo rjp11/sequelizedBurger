@@ -44,3 +44,28 @@
 		</div>
 	</div>
 </div>
+
+
+<script>
+	$(".devourIt").on("click", function(event) {
+      var id = $(this).attr("id");
+      
+      var devouredStatus = {
+          devoured: true,
+      } 
+
+      console.log(devouredStatus);
+  
+      // Send the PUT request.
+      $.ajax("/burgers/update/" + id, {
+        type: "PUT",
+        data: devouredStatus
+      }).then(
+        function() {
+          console.log("changed devoured to true");
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+</script>
