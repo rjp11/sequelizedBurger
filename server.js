@@ -24,5 +24,8 @@ app.use("/update", routes);
 app.use("/create", routes);
 
 // listen on port 3000
+
+// INSERT DIFFERENT PORT LANGUAGE HERE!!!!!
+// AND DROP YOUR OLD BURGER DATABASE TO MAKE LOCAL MACHINE WORK
 var port = process.env.PORT || 3000;
 app.listen(port);
